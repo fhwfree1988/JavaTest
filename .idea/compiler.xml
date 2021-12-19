@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SamplesSpring" />
+        <module name="mysite" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mysite" target="11" />
       <module name="SamplesSpring" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SamplesSpring" options="-parameters" />
+      <module name="mysite" options="-parameters" />
     </option>
   </component>
 </project>
