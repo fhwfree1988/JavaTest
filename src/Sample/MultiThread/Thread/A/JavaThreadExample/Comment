@@ -1,0 +1,21 @@
+Titles----> https://www.journaldev.com/1079/multithreading-in-java
+
+https://www.journaldev.com/1016/java-thread-example
+
+Runnable vs Thread
+
+If your class provides more functionality rather than just running as Thread, you should implement Runnable interface to provide a way to run it as Thread. If your class only goal is to run as Thread, you can extend Thread class.
+
+Implementing Runnable is preferred because java supports implementing multiple interfaces. If you extend Thread class, you can’t extend any other classes.
+
+Tip: As you have noticed that thread doesn’t return any value but what if we want our thread to do some processing and then return the result to our client program, check our Java Callable Future.
+
+Update: From Java 8 onwards, Runnable is a functional interface and we can use lambda expressions to provide it’s implementation rather than using anonymous class. For more details, check out Java 8 Functional Interfaces.
+
+
+--------------------------------------
+---->Future ----> https://www.journaldev.com/1090/java-callable-future-example
+https://www.tutorialspoint.com/difference-between-process-and-thread
+https://www.boraji.com/java-8-runnable-example-using-lambda-expression
+
+----->thread states ----> https://www.whizlabs.com/blog/thread-states-java/
