@@ -1,6 +1,6 @@
 package Sample.Other.ConceptInterfaces.LambdaExpressions;
 
-import org.Models.Employee;
+import Sample.Other.Models.Employee;
 
 import java.util.ArrayList;
 import java.util.Arrays;

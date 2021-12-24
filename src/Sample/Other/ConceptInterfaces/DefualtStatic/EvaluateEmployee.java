@@ -1,6 +1,6 @@
 package Sample.Other.ConceptInterfaces.DefualtStatic;
 
-import org.Models.Employee;
+import Sample.Other.Models.Employee;
 
 public class EvaluateEmployee implements Evaluate {
     double salary;
