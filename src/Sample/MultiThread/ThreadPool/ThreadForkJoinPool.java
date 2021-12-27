@@ -22,11 +22,11 @@ public class ThreadForkJoinPool {
 
         int value;
 
-        Set<TreeNode> children;
+        Set<TreeNode> children_m;
 
         TreeNode(int value, TreeNode... children) {
             this.value = value;
-            this.children = Sets.newHashSet(children);
+            this.children_m = Sets.newHashSet(children);
         }
     }
     public static class CountingTask extends RecursiveTask<Integer> {
