@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ThreadForkJoinPool {
     //https://www.baeldung.com/thread-pool-java-and-guava
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         TreeNode tree = new TreeNode(5,
                 new TreeNode(3), new TreeNode(2,
                 new TreeNode(2), new TreeNode(8)));
@@ -43,5 +43,5 @@ public class ThreadForkJoinPool {
                     .map(childNode -> new CountingTask(childNode).fork())
                     .collect(Collectors.summingInt(ForkJoinTask::join));
         }
-    }
+    }*/
 }
