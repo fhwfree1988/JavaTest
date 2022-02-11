@@ -1,4 +1,4 @@
-package Sample.Stream;
+package Sample.Stream.TesingMap;
 
 import com.sun.org.apache.xerces.internal.impl.dv.util.ByteListImpl;
 
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StreamTest {
+public class StreamMapTest {
     public static void main(String[] args) {
         class MyStreamPerson{
             int ID = 0;
