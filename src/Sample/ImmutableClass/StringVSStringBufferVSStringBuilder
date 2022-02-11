@@ -1,0 +1,25 @@
+Difference between String and StringBuffer/StringBuilder:
+
+String is immutable in nature whereas StringBuffer and StringBuilder are mutable.
+
+Immutable: immutable means non-changeable. It creates new objects every time you create strings or assign a new string(change the value).
+
+Mutable: mutable means changeable. It is allowed to change values in existing object rather creating new object.
+
+String str = "Hello";         //new object is created
+str = str +  "Welcome";       //new object is created internally
+StringBuffer str1 = "Hello";  //new object created
+str1 = str1 +  "Welcome";
+StringBuilder str2 = "Hello"; //new object created
+str2 = str2 +  "Welcome";
+
+
+Difference between StringBuffer and StringBuilder:
+
+StringBuffer is synchronized( which means it is thread safe) whereas StringBuilder is not synchronized( which implies it isn’t thread safe).
+
+Recommendation:
+
+It is recommended to use String when value of string is non-changeable.
+It is recommended to use StringBuffer when value of string is changeable and application is implemented in multithreaded environment.
+It is recommended to use StringBuilder when value of string is changeable but application is not using multiple threads.
