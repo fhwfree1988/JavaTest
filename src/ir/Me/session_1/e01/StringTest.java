@@ -14,5 +14,8 @@ public class StringTest {
 
         logger.info(s1 == s2);
         logger.info(s3 == s4);
+
+        String log = String.format("head(%1$d) {left: %2$d , right : %3$d , startx : %4$d}",1,10,20,555);
+        logger.info(log);
     }
 }
