@@ -35,4 +35,8 @@ public class Employee implements Comparable<Employee>{
     public String toString() {
         return getClass().getName() + "[Name:" + name + ",Salary:" + salary +"]";
     }
+
+    public void salaryIncrement(double val) {
+        this.salary+=val;
+    }
 }
