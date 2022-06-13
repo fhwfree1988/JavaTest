@@ -10,13 +10,17 @@ import java.util.stream.Stream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-
+class employeeRepository{
+    public static Stream findById(int id){
+        Arrays.stream(StreamSampleOne.arrayOfEmps).filter(X-> X.getID() == id );
+    }
+}
 public class StreamSampleOne {
 //https://stackify.com/streams-guide-java-8/
-    private static Employee[] arrayOfEmps ={
-            new Employee( "Jeff Bezos", 100000.0),
-            new Employee("Bill Gates", 200000.0),
-            new Employee( "Mark Zuckerberg", 300000.0)
+    public static Employee[] arrayOfEmps ={
+            new Employee(1, "Jeff Bezos", 100000.0),
+            new Employee(2,"Bill Gates", 200000.0),
+            new Employee(3,"Mark Zuckerberg", 300000.0)
     };
 
     private static List<Employee> empList = Arrays.asList(arrayOfEmps);
@@ -27,7 +31,7 @@ public class StreamSampleOne {
     }
 
     @Test
-    public void whenIncrementSalaryForEachEmployee_thenApplyNewSalary() {
+    public static void whenIncrementSalaryForEachEmployee_thenApplyNewSalary() {
         empList.stream().forEach(e -> e.salaryIncrement(10.0));
 
         /*assertThat(empList, contains(
@@ -38,7 +42,7 @@ public class StreamSampleOne {
     }
 
     @Test
-    public void whenMapIdToEmployees_thenGetEmployeeStream() {
+    public static void whenMapIdToEmployees_thenGetEmployeeStream() {
         Integer[] empIds = { 1, 2, 3 };
 
         List<Employee> employees = Stream.of(empIds)
