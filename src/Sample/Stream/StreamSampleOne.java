@@ -11,8 +11,8 @@ import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 class employeeRepository{
-    public static Stream findById(int id){
-        Arrays.stream(StreamSampleOne.arrayOfEmps).filter(X-> X.getID() == id );
+    public static Employee findById(int id){
+        return Arrays.stream(StreamSampleOne.arrayOfEmps).filter(X -> X.getID() == id ).findFirst().orElse(null);
     }
 }
 public class StreamSampleOne {
@@ -28,6 +28,9 @@ public class StreamSampleOne {
         Stream.of(arrayOfEmps);
 
         empList.stream();
+
+        whenIncrementSalaryForEachEmployee_thenApplyNewSalary();
+        whenMapIdToEmployees_thenGetEmployeeStream();
     }
 
     @Test
