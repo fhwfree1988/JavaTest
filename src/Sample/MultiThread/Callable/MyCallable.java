@@ -15,7 +15,7 @@ public class MyCallable implements Callable<String> {
 
     @Override
     public String call() throws Exception {
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         //return the thread name executing this callable task
         return Thread.currentThread().getName();
     }
@@ -27,7 +27,7 @@ public class MyCallable implements Callable<String> {
         List<Future<String>> list = new ArrayList<Future<String>>();
         //Create MyCallable instance
         Callable<String> callable = new MyCallable();
-        for(int i=0; i< 100; i++){
+        for(int i=0; i< 10; i++){
             //submit Callable tasks to be executed by thread pool
             Future<String> future = executor.submit(callable);
             //add Future to the list, we can get return value using Future

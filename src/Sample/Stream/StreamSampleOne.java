@@ -1,15 +1,15 @@
 package Sample.Stream;
 
 import Sample.Other.Models.Employee;
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertEquals;
+/*import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertEquals;*/
 class employeeRepository{
     public static Employee findById(int id){
         return Arrays.stream(StreamSampleOne.arrayOfEmps).filter(X -> X.getID() == id ).findFirst().orElse(null);
@@ -34,7 +34,7 @@ public class StreamSampleOne {
         whenMapIdToEmployees_thenGetEmployeeStream();
     }
 
-    @Test
+    //@Test
     public static void whenIncrementSalaryForEachEmployee_thenApplyNewSalary() {
         empList.stream().forEach(e -> e.salaryIncrement(10.0));
 
@@ -45,7 +45,7 @@ public class StreamSampleOne {
         ));*/
     }
 
-    @Test
+    //@Test
     public static void whenMapIdToEmployees_thenGetEmployeeStream() {
         Integer[] empIds = {1, 2, 3};
 
@@ -53,6 +53,6 @@ public class StreamSampleOne {
                 .map(employeeRepository::findById)
                 .collect(Collectors.toList());
 
-        assertEquals(employees.size(), empIds.length);
+       /* assertEquals(employees.size(), empIds.length);*/
     }
 }
