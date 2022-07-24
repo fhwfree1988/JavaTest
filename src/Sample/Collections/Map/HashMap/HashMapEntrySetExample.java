@@ -1,12 +1,9 @@
 package Sample.Collections.Map.HashMap;
 
 
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
+import java.util.stream.Collectors;
 
 public class HashMapEntrySetExample {
 
@@ -39,6 +36,11 @@ public class HashMapEntrySetExample {
         entrySet.remove(simpleEntry);
         System.out.println("map after removing Entry = "+map);
         System.out.println("entrySet after removing Entry = "+entrySet);
+
+        //---------------------------------
+        List<String> fruits = Arrays.asList("apple","mango");
+        System.out.println(fruits.stream().map(fruit -> fruit.split("")).flatMap(Arrays::stream).collect(Collectors.toSet()));
+
     }
 
 }
