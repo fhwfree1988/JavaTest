@@ -4,7 +4,10 @@ package Sample.FunctionalInterface;
 // Via apply() method
 
 // Importing interface
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 
 // Main class
 public class FunctionTest {
@@ -35,5 +38,17 @@ public class FunctionTest {
 
         // Applying the function to get the result
         System.out.println(Definition.apply(1));
+
+
+        //------------------------
+        System.out.println("---------DATE");
+        List<String> dates = new ArrayList<String>();
+        dates.add("1900/01/01");
+        dates.add("1988/05/01");
+        dates.add("2000/09/06");
+
+        UnaryOperator<String> replaceSlashes = date -> date.replace("/","-");
+        dates.replaceAll(replaceSlashes);
+        dates.stream().forEach(System.out::println);
     }
 }
