@@ -4,6 +4,8 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class EqualTest {
     public static void main(String[] args) {
@@ -14,5 +16,10 @@ public class EqualTest {
 
         System.out.println(list1.equals(list2));
         System.out.println(list1.equals(list3));
+
+        //----------------- Capitalizing by Function
+        List<String> songTitles = Arrays.asList("humble","element","dna");
+        Function<String,String> capitalize = str -> str.toUpperCase();
+        songTitles.stream().map(capitalize).forEach(System.out::println);
     }
 }

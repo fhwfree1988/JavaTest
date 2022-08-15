@@ -14,7 +14,7 @@ public class StringPool {
         String str1 = "my-string";
         String str2 = new String("my-string");
         str2.intern();
-        System.out.println("intern --> " + str1 == str2);
+        System.out.println("intern --> " + (str1 == str2));
 
 
         //-----------------------
@@ -23,7 +23,7 @@ public class StringPool {
         String ss3 = new String("foo");
         String ss4 = ss1.intern();
         String ss5 = ss2.intern();
-        System.out.println("ss3 == ss4" + ss3 == ss4);
-        System.out.println("ss1 == ss5" + ss1 == ss5);
+        System.out.println("ss3 == ss4 : " + (ss3 == ss4));
+        System.out.println("ss1 == ss5 : " + (ss1 == ss5));
     }
 }
