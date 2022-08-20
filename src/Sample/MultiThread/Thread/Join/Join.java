@@ -1,7 +1,7 @@
 package Sample.MultiThread.Thread.Join;
 
 public class Join {
-
+//https://www.digitalocean.com/community/tutorials/java-thread-join-example
     public static void main(String[] args) {
         Thread t1 = new Thread(new MyRunnable(), "t1");
         Thread t2 = new Thread(new MyRunnable(), "t2");
