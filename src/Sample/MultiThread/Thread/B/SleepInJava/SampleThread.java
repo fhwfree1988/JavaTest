@@ -1,4 +1,4 @@
-package Thread.B.SleepInJava;
+package Sample.MultiThread.Thread.B.SleepInJava;
 
 import java.util.concurrent.TimeUnit;
 

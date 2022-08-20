@@ -1,4 +1,4 @@
-package Thread.A.JavaThreadExample;
+package Sample.MultiThread.Thread.A.JavaThreadExample;
 
 public class ThreadRunExample_Main {
     public static void main(String[] args){

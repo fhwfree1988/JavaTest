@@ -1,4 +1,4 @@
-package Thread.A.JavaThreadExample;
+package Sample.MultiThread.Thread.A.JavaThreadExample;
 
 public class MyThread extends Thread{
     public MyThread(String name) {

@@ -1,4 +1,4 @@
-package Thread.B.SleepInJava;
+package Sample.MultiThread.Thread.B.SleepInJava;
 
 public class TheInterruptedExceptionInJava {
 
