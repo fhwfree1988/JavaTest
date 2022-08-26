@@ -12,7 +12,7 @@ public class TestThreadMain {
 		t2.start();
 
 		try {
-			Thread.sleep(300000);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
