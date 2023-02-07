@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class EqualTest {
+
     public static void main(String[] args) {
         String[] array = new String[]{"A","B","C"};
         List<String> list1 = Arrays.asList(array);
