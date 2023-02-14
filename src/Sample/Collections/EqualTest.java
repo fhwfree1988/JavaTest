@@ -23,4 +23,5 @@ public class EqualTest {
         Function<String,String> capitalize = str -> str.toUpperCase();
         songTitles.stream().map(capitalize).forEach(System.out::println);
     }
+
 }
