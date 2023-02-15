@@ -7,7 +7,7 @@ public class ExampleException1 {
     }
 
     private void Method1() throws /*Exception*/RuntimeException{
-        //throw new RuntimeException("Me ExampleException");
+        throw new RuntimeException("Me ExampleException");
 
     }
     public void Method2(){
