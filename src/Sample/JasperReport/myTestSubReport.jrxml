@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="myTestSubReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="426840db-b8e1-45c3-880d-69800cc8acaa">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="city" class="java.lang.String"/>
+	<field name="street" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="33f762f3-368e-4aa9-96cc-ec93244a9f79"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Addresses]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="12" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="12" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="120" height="20" uuid="af475325-9ccb-4990-9187-0b0f11cbb966"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{city}+" Address:"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="120" y="0" width="435" height="20" uuid="7d0c173a-e8ee-4861-8c3d-1a456bc608b5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{street}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="8" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>

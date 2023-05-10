@@ -15,10 +15,10 @@ public class TryWithResources {
         //----JAVA 9
         AutoCloseableResourcesFirst af = new AutoCloseableResourcesFirst();
         AutoCloseableResourcesSecond as = new AutoCloseableResourcesSecond();
-        try (af;as){
+       /* try (af;as){
             af.doSomething();
             as.doSomething();
-        }
+        }*/
     }
 
     class AutoCloseableResourcesFirst implements AutoCloseable {
