@@ -1,0 +1,35 @@
+User
+I need a site to upload and run my robot which has written by mql5 for MT5 to do a backtest and forward test.I know MT5 windows app and I need to use another way to run this robot.
+ChatGPT
+If you're looking for an alternative way to run your MQL5 robot for backtesting and forward testing, you can consider using online trading platforms that support the MetaTrader 5 (MT5) platform. These platforms allow you to upload and run your MQL5 robot without the need for the MT5 Windows application. Here are a few options you can explore:
+
+MetaQuotes Cloud Network (MQL5 Cloud Network): This is a service provided by MetaQuotes, the company behind MetaTrader. It allows you to rent computing power from the cloud to run your MQL5 programs. You can upload your robot to the cloud and perform backtesting and forward testing using the MQL5 Cloud Network. You can find more information about this service on the MetaQuotes website.
+
+TradingView: TradingView is a popular online charting and trading platform that supports various trading integrations, including MT5. It provides a scripting language called Pine Script that allows you to create and test trading strategies. You can write your robot in Pine Script and run it on TradingView's platform for backtesting and forward testing.
+
+Forex Tester: Forex Tester is a dedicated software for backtesting trading strategies. It supports the MT4 and MT5 platforms and allows you to import and run your MQL5 robot for backtesting purposes. It provides a range of testing and analysis tools specifically designed for traders.
+
+Soft4FX Forex Simulator: This is another software solution for backtesting trading strategies. It supports both MT4 and MT5 platforms and enables you to import and run your MQL5 robot. Soft4FX Forex Simulator provides a realistic trading environment and various tools for accurate backtesting.
+
+Please note that the availability and features of these platforms may vary, so it's recommended to visit their respective websites for more detailed information and to choose the one that best suits your needs.
+
+
+
+
+
+User
+actually I need test online and also when am not at the desk and continue testing for a month even when my pc is off
+ChatGPT
+If you're looking for a solution that allows you to run your MQL5 robot online and continuously test it even when your computer is turned off, you might consider using a virtual private server (VPS) or a cloud-based hosting service. These services provide remote access to a virtual machine where you can install and run your MT5 platform and MQL5 robot. Here's how you can go about it:
+
+Choose a VPS or cloud hosting provider: There are several reputable providers that offer VPS or cloud hosting services specifically tailored for trading purposes. Some popular options include Amazon Web Services (AWS), Google Cloud Platform, Microsoft Azure, and MetaQuotes VPS. You can compare the features, pricing, and availability of these providers to choose the one that suits your requirements.
+
+Set up the virtual machine: Once you've selected a provider, you'll need to set up a virtual machine (VM) on their platform. This involves choosing the specifications for the VM, such as CPU, RAM, and storage capacity, and installing the operating system (e.g., Windows Server) and the MT5 platform.
+
+Install your MQL5 robot: After setting up the VM, you can install the MT5 platform and upload your MQL5 robot to the virtual machine. You can either download the MT5 platform from the official MetaQuotes website or use the installation files provided by your broker.
+
+Configure remote access: To access the virtual machine remotely, you'll need to configure remote desktop access or use a remote desktop client to connect to the VM. The specific steps for remote access will depend on the provider and the operating system you're using on the VM.
+
+Keep the VM running: Once everything is set up, you can keep the virtual machine running 24/7, even when your local computer is turned off. This allows you to perform continuous testing of your MQL5 robot without interruption.
+
+It's important to consider the cost associated with using a VPS or cloud hosting service, as well as any additional fees for data transfer or storage. Be sure to review the pricing plans and select an option that aligns with your budget and testing requirements.
