@@ -5,5 +5,6 @@ public class Casting {
 
         double T = 2;
         int jar = (int) T;
+        int min = Integer.MAX_VALUE;
     }
 }
