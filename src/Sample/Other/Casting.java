@@ -7,6 +7,7 @@ public class Casting {
 
         Casting c = new Casting();
         double res = c.getResult(270,16,1.0216);
+        double res1 = c.getResult(30,16,1.0216);
         double res2 = c.getResultWP(270,16);
         double T = 2;
         int jar = (int) T;
@@ -45,22 +46,24 @@ public class Casting {
             if(count == 5)
                 all = all + 15 ;//-100;//vam;
             if(count == 7)
-                all = all + 40;
+                all = all + 35;
 
-            if(count >2)
-                pp = (pp*1.07);
+            /*if(count >2)
+                pp = (pp*1.07);*/
             if(count > 7)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 9) {
+            if(count == 10) {
                 //all = all * 1.3;
                 all = all - 320;
+                if(all < 0)
+                    all = 0;
             }
-            if(count == 10) {
+            /*if(count == 10) {
                 all = all + 100;
-            }
+            }*/
             /*if(count == 11) {
                 all = all + 100;//vam
             }*/
@@ -84,20 +87,22 @@ public class Casting {
                 all = all + 15;
             if(count == 7)
                 all = all + 35;
-            if(count >2)
-                pp = (pp*1.07);
+            /*if(count >2)
+                pp = (pp*1.07);*/
 
             if(count > 7)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 9) {
-                all = all - 320;
-            }
             if(count == 10) {
-                all = all + 100;
+                all = all - 320;
+                if(all < 0)
+                    all = 0;
             }
+           /* if(count == 10) {
+                all = all + 100;
+            }*/
 
             if(count == 13)
                 all = all + 25;
