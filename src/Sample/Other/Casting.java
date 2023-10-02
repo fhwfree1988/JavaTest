@@ -6,8 +6,8 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(270,16,1.0216);
-        double res1 = c.getResult(30,16,1.0216);
+        double res = c.getResult(70,16,1.0216);
+        //double res1 = c.getResult(30,16,1.0216);
         double res2 = c.getResultWP(270,16);
         double T = 2;
         int jar = (int) T;
@@ -37,19 +37,19 @@ public class Casting {
         double pp = plus;
 
         while(count < 15){
-
+            pp = plus;
             if(count > 1)
                 all = all * percent;
 
-            if(count == 1)
+            if(count == 2)
                 all = all + 24;
             if(count == 5)
                 all = all + 15 ;//-100;//vam;
             if(count == 7)
                 all = all + 35;
 
-            /*if(count >2)
-                pp = (pp*1.07);*/
+            if(count >1)
+                pp = (pp*1.25);
             if(count > 7)
                 all = all + (pp*1.20);
             else
@@ -81,14 +81,15 @@ public class Casting {
         double pp = plus;
 
         while(count < 15){
+            pp = plus;
             if(count == 1)
                 all = all + 24;
             if(count == 5)
                 all = all + 15;
             if(count == 7)
                 all = all + 35;
-            /*if(count >2)
-                pp = (pp*1.07);*/
+            if(count >1)
+                pp = (pp*1.25);
 
             if(count > 7)
                 all = all + (pp*1.20);
