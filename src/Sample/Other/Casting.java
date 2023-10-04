@@ -6,7 +6,7 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(70,16,1.0216);
+        double res = c.getResult(290,16,1.0216);
         //double res1 = c.getResult(30,16,1.0216);
         double res2 = c.getResultWP(270,16);
         double T = 2;
@@ -36,7 +36,7 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 15){
+        while(count < 14){
             pp = plus;
             if(count > 1)
                 all = all * percent;
@@ -44,7 +44,7 @@ public class Casting {
             if(count == 2)
                 all = all + 24;
             if(count == 5)
-                all = all + 15 ;//-100;//vam;
+                all = all + 5 ;//-100;//vam;
             if(count == 7)
                 all = all + 35;
 
