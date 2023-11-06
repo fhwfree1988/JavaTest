@@ -1,14 +1,16 @@
 package Sample.Other;
 
+
 import java.io.Console;
 import java.math.BigDecimal;
 
 public class Casting {
+    static record Human (String name, int age, String profession) {}
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(60,15,1.0216);
-        //double res1 = c.getResult(30,16,1.0216);
+        double res = c.getResult(300,20,1.0216);
+        double res1 = c.getResult(300,20,1.0216);
         double res2 = c.getResultWP(270,15);
         double T = 2;
         int jar = (int) T;
@@ -20,8 +22,17 @@ public class Casting {
 
         if(checkValueAfterDigit(number))
             throw new RuntimeException();
+
     }
 
+    public String checkObject(Object obj) {
+        /*return switch (obj) {
+            case Human h -> "Name: %s, age: %n and profession: %s".formatted(h.name(), h.age(), h.profession());
+            case Circle c -> "This is a circle";
+            default -> "It is an object";
+        };*/
+        return "";
+    }
     static int integerDigits(BigDecimal n) {
         n = n.stripTrailingZeros();
         return n.precision() - n.scale();
@@ -44,32 +55,21 @@ public class Casting {
 
             if(count == 1)
                 all = all + 24;
-            if(count == 5)
-                all = all + 5 ;//-100;
             if(count == 6)
                 all = all + 40;
 
-            if(count >1)
-                pp = (pp*1.25);
-            if(count > 7)
+            if(count > 6)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 10) {
-                //all = all * 1.3;
+            if(count == 9) {
                 all = all - 320;
                 System.out.println("count == 10 --> " + all);
                 if(all < 0)
                     all = 0;
             }
-            /*if(count == 10) {
-                all = all + 100;
-            }*/
-            /*if(count == 11) {
-                all = all + 100;
-            }*/
-            if(count == 13)
+            if(count == 12)
                 all = all + 30;
 
             count++;
@@ -86,29 +86,22 @@ public class Casting {
             pp = plus;
             if(count == 1)
                 all = all + 24;
-            if(count == 5)
-                all = all + 15;
-            if(count == 6)
+            if(count ==6)
                 all = all + 40;
-            if(count >1)
-                pp = (pp*1.25);
 
-            if(count > 7)
+            if(count > 6)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 10) {
+            if(count == 9) {
                 all = all - 320;
                 System.out.println("count == 10 --> " + all);
                 if(all < 0)
                     all = 0;
             }
-           /* if(count == 10) {
-                all = all + 100;
-            }*/
 
-            if(count == 13)
+            if(count == 12)
                 all = all + 30;
 
             count++;
