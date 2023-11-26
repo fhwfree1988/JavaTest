@@ -12,9 +12,9 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(300,19,1.0216);
+        double res = c.getResult(370,20,1.0216);
         //double res1 = c.getResult(300,20,1.0216);
-        double res2 = c.getResultWP(300,19);
+        double res2 = c.getResultWP(370,20);
         double T = 2;
         int jar = (int) T;
         int min = Integer.MAX_VALUE;
@@ -69,7 +69,7 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 13){
+        while(count < 12){
             pp = plus;
             if(count > 1)
                 all = all * percent;
@@ -77,24 +77,21 @@ public class Casting {
             if(count == 1)
                 all = all + 24;
 
-            if(count == 1)
-                all = all + 50;
-
-            if(count == 6)
+            if(count == 5)
                 all = all + 40;
 
-            if(count > 6)
+            if(count > 5)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 9) {
+            if(count == 8) {
                 all = all - 320;
                 System.out.println("count == 9 --> " + all);
                 if(all < 0)
                     all = 0;
             }
-            if(count == 12)
+            if(count == 11)
                 all = all + 30;
 
             count++;
@@ -107,28 +104,27 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 13){
+        while(count < 12){
             pp = plus;
             if(count == 1)
                 all = all + 24;
-            if(count == 1)
-                all = all + 50;
-            if(count ==6)
+
+            if(count ==5)
                 all = all + 40;
 
-            if(count > 6)
+            if(count > 5)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 9) {
+            if(count == 8) {
                 all = all - 320;
                 System.out.println("count == 9 --> " + all);
                 if(all < 0)
                     all = 0;
             }
 
-            if(count == 12)
+            if(count == 11)
                 all = all + 30;
 
             count++;
