@@ -3,15 +3,18 @@ package Sample.Other;
 
 import java.io.Console;
 import java.math.BigDecimal;
+import java.text.MessageFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Casting {
     static record Human (String name, int age, String profession) {}
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(300,20,1.0216);
-        double res1 = c.getResult(300,20,1.0216);
-        double res2 = c.getResultWP(270,15);
+        double res = c.getResult(300,19,1.0216);
+        //double res1 = c.getResult(300,20,1.0216);
+        double res2 = c.getResultWP(300,19);
         double T = 2;
         int jar = (int) T;
         int min = Integer.MAX_VALUE;
@@ -20,9 +23,27 @@ public class Casting {
         String numberStr = number.toString();
         //integerDigits(number);
 
+        String query = "select generate_request_no_pch({0},{1}) as No from dual";
+        String type = "'5'";
+        String plakNum = "'56465465'";
+        query = MessageFormat.format(query, type,plakNum);
         if(checkValueAfterDigit(number))
             throw new RuntimeException();
 
+        System.out.println("-----TIME END------  " + new SimpleDateFormat("mm:ss.SSS").format(new Date()));
+
+        long systemMili = System.currentTimeMillis();
+        System.out.println("before doing ------>>");
+        //do somthing with deley
+        System.out.println(getMilisString("after doing",systemMili));
+    }
+
+    public static String getMilisString(String title, long systemMili){
+        StringBuilder s = new StringBuilder();
+        s.append(title);
+        s.append(" : ");
+        s.append((System.currentTimeMillis() - systemMili));
+        return s.toString();
     }
 
     public String checkObject(Object obj) {
@@ -55,6 +76,10 @@ public class Casting {
 
             if(count == 1)
                 all = all + 24;
+
+            if(count == 1)
+                all = all + 50;
+
             if(count == 6)
                 all = all + 40;
 
@@ -65,7 +90,7 @@ public class Casting {
 
             if(count == 9) {
                 all = all - 320;
-                System.out.println("count == 10 --> " + all);
+                System.out.println("count == 9 --> " + all);
                 if(all < 0)
                     all = 0;
             }
@@ -86,6 +111,8 @@ public class Casting {
             pp = plus;
             if(count == 1)
                 all = all + 24;
+            if(count == 1)
+                all = all + 50;
             if(count ==6)
                 all = all + 40;
 
@@ -96,7 +123,7 @@ public class Casting {
 
             if(count == 9) {
                 all = all - 320;
-                System.out.println("count == 10 --> " + all);
+                System.out.println("count == 9 --> " + all);
                 if(all < 0)
                     all = 0;
             }
