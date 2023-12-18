@@ -12,9 +12,9 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(415,20,1.0216);
+        double res = c.getResult(425,20,1.0216);
         //double res1 = c.getResult(300,20,1.0216);
-        double res2 = c.getResultWP(415,20);
+        double res2 = c.getResultWP(425,20);
         double T = 2;
         int jar = (int) T;
         int min = Integer.MAX_VALUE;
@@ -78,7 +78,7 @@ public class Casting {
                 all = all + 40;
 
             if(count > 5)
-                all = all + (pp*1.20);
+                all = all + (pp*1.18);
             else
                 all = all + pp;
 
@@ -108,7 +108,7 @@ public class Casting {
                 all = all + 40;
 
             if(count > 5)
-                all = all + (pp*1.20);
+                all = all + (pp*1.18);
             else
                 all = all + pp;
 
