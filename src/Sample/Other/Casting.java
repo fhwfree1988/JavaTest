@@ -82,9 +82,9 @@ public class Casting {
             else
                 all = all + pp;
 
-            if(count == 8) {
+            if(count == 7) {
                 all = all - 320;
-                System.out.println("count == 8 --> " + all);
+                System.out.println("count == 7 --> " + all);
                 if(all < 0)
                     all = 0;
             }
@@ -112,9 +112,9 @@ public class Casting {
             else
                 all = all + pp;
 
-            if(count == 8) {
+            if(count == 7) {
                 all = all - 320;
-                System.out.println("count == 8 --> " + all);
+                System.out.println("count == 7 --> " + all);
                 if(all < 0)
                     all = 0;
             }
