@@ -38,7 +38,7 @@ public class AtomicInt {
         writerThread.start();
         readerThread.start();
 
-        Thread.sleep(4000);
+        Thread.sleep(10);
 
         test.isStopped.getAndSet(true);
 

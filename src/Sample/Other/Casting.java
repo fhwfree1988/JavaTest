@@ -12,9 +12,9 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(322,21,1.0225);
+        double res = c.getResult(322,20,1.0216);
         //double res1 = c.getResult(300,20,1.0216);
-        double res2 = c.getResultWP(322,21);
+        double res2 = c.getResultWP(322,20);
         double T = 2;
         int jar = (int) T;
         int min = Integer.MAX_VALUE;
