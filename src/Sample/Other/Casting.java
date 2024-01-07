@@ -69,28 +69,31 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 11){
+        while(count < 9){
             pp = plus;
             if(count > 1)
                 all = all * percent;
 
-            if(count == 3)
+            if(count == 2)
                 all = all + 40;
 
-            if(count > 3)
+            if(count > 2)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 6) {
-                all = all + 99 + 120 + 30;
-                all = all - 320;
-                System.out.println("count == 6 --> " + all);
+            if(count == 5) {
+                //all = all + 90 + 120 + 30;
+                //all = all - 320;
+                all = all - 20;
+                System.out.println("count == 5 --> " + all);
                 if(all < 0)
                     all = 0;
             }
-            if(count == 10)
-                all = all + 35;
+            if(count == 8) {
+                all = all + 90 + 120 + 50;
+                //all = all + 35;
+            }
 
             count++;
         }
@@ -102,27 +105,30 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 11){
+        while(count < 9){
             pp = plus;
 
-            if(count ==3)
+            if(count ==2)
                 all = all + 40;
 
-            if(count > 3)
+            if(count > 2)
                 all = all + (pp*1.20);
             else
                 all = all + pp;
 
-            if(count == 6) {
-                all = all + 99 + 120 + 30;
-                all = all - 320;
-                System.out.println("count == 6 --> " + all);
+            if(count == 5) {
+                //ll = all + 99 + 120 + 30;
+                //all = all - 320;
+                all = all - 20;
+                System.out.println("count == 5 --> " + all);
                 if(all < 0)
                     all = 0;
             }
 
-            if(count == 10)
-                all = all + 30;
+            if(count == 8) {
+                all = all + 90 + 120 + 50;
+                //all = all + 35;
+            }
 
             count++;
         }
