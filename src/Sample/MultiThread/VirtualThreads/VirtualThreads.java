@@ -1,4 +1,6 @@
 package Sample.MultiThread.VirtualThreads;
+import Sample.MultiThread.Callable.MyCallable;
+
 import java.util.concurrent.ThreadFactory;
 
 //https://www.baeldung.com/java-virtual-thread-vs-thread
@@ -16,16 +18,24 @@ public class VirtualThreads {
         virtualThread.start();
         kernelThread.start();
 
-        /*Thread virtualThread = Thread.ofVirtual().start(() -> {
+        //------------------------------------------------
+        Thread virtualThread2 = Thread.ofVirtual().start(() -> {
             // Code to be executed by the virtual thread
+            System.out.println("Hello Virtual Thread!");
         });
+        //virtualThread2.start();
 
-        virtualThread.start();*/
+        //------------------------------------------------
+        Runnable task = () -> { System.out.println("Hello Virtual Thread!"); };
+        Thread.startVirtualThread(task);
 
-       /* Runnable task = () -> { System.out.println("Hello Virtual Thread!"); };
-        Thread.startVirtualThread(task);*/
+
+        //------------------------------------------------
+        System.out.println(test(1));
+        System.out.println(test("1"));
+        System.out.println(test(new MyCallable()));
     }
-    public String test(Object obj) {
+    public static String test(Object obj) {
 
         return switch(obj) {
 
@@ -33,7 +43,7 @@ public class VirtualThreads {
 
             case String s -> "A string";
 
-            //case Cat c -> "A Cat";
+            case MyCallable c -> "A MyCallable";
 
             default -> "I don't know what it is";
 
