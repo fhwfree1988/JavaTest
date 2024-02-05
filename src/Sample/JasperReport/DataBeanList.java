@@ -11,6 +11,10 @@ public class DataBeanList {
         SubReportBean subBean1 = new SubReportBean();
         subBean1.setCity("Mumbai");
         subBean1.setStreet("M.G.Road");
+        SubReportBean subBean12 = new SubReportBean();
+        subBean12.setCity("Mumbai2");
+        subBean12.setStreet("M.G.Road2");
+
         SubReportBean subBean2 = new SubReportBean();
         subBean2.setCity("New York");
         subBean2.setStreet("Park Street");
@@ -22,7 +26,7 @@ public class DataBeanList {
 
         // Create master report data
         dataBeanList.add(produce("Manisha", "India",
-                Arrays.asList(subBean1)));
+                Arrays.asList(subBean1,subBean12)));
         dataBeanList.add(produce("Dennis Ritchie", "USA",
                 Arrays.asList(subBean2)));
         dataBeanList.add(produce("V.Anand", "India",
