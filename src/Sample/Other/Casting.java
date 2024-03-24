@@ -12,9 +12,9 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(350,20,1.0216);
+        double res = c.getResult(420,20,1.025);
         //double res1 = c.getResult(300,20,1.0216);
-        double res2 = c.getResultWP(350,20);
+        double res2 = c.getResultWP(420,20);
         double T = 2;
         int jar = (int) T;
         int min = Integer.MAX_VALUE;
@@ -69,28 +69,22 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 9){
+        while(count < 7){
             pp = plus;
             if(count > 1)
                 all = all * percent;
 
-            if(count == 2)
-                all = all + 40;
+            all = all + (pp*1.20);
 
-            if(count > 1)
-                all = all + (pp*1.20);
-            else
-                all = all + pp;
-
-            if(count == 4) {
+            if(count == 3) {
                 //all = all + 90 + 120 + 30;
                 //all = all - 320;
-                all = all - 20;
+                all = all - 10;
                 System.out.println("count == 5 --> " + all);
                 if(all < 0)
                     all = 0;
             }
-            if(count == 5) {
+            if(count == 3) {
                 all = all + 90 + 120 + 50;
                 //all = all + 35;
             }
@@ -105,27 +99,22 @@ public class Casting {
         double all = firstStep;
         double pp = plus;
 
-        while(count < 9){
+        while(count < 7){
             pp = plus;
 
-            if(count ==2)
-                all = all + 40;
+            all = all + (pp*1.20);
 
-            if(count > 1)
-                all = all + (pp*1.20);
-            else
-                all = all + pp;
 
-            if(count == 4) {
+            if(count == 3) {
                 //ll = all + 99 + 120 + 30;
                 //all = all - 320;
-                all = all - 20;
+                all = all - 10;
                 System.out.println("count == 5 --> " + all);
                 if(all < 0)
                     all = 0;
             }
 
-            if(count == 5) {
+            if(count == 3) {
                 all = all + 99 + 120 + 50;
                 //all = all + 35;
             }
