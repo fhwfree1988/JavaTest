@@ -12,9 +12,9 @@ public class Casting {
     public static void main(String[] args) {
 
         Casting c = new Casting();
-        double res = c.getResult(420,20,1.025);
+        double res = c.getResult(450,23,1.025);
         //double res1 = c.getResult(300,20,1.0216);
-        double res2 = c.getResultWP(420,20);
+        double res2 = c.getResultWP(450,23);
         double T = 2;
         int jar = (int) T;
         int min = Integer.MAX_VALUE;
@@ -74,7 +74,7 @@ public class Casting {
             if(count > 1)
                 all = all * percent;
 
-            all = all + (pp*1.20);
+            all = all + (pp*1.22);
 
             if(count == 3) {
                 //all = all + 90 + 120 + 30;
@@ -84,8 +84,8 @@ public class Casting {
                 if(all < 0)
                     all = 0;
             }
-            if(count == 3) {
-                all = all + 90 + 120 + 50;
+            if(count == 6) {
+                all = all + 95 + 120 + 80;
                 //all = all + 35;
             }
 
@@ -102,7 +102,7 @@ public class Casting {
         while(count < 7){
             pp = plus;
 
-            all = all + (pp*1.20);
+            all = all + (pp*1.22);
 
 
             if(count == 3) {
@@ -114,8 +114,8 @@ public class Casting {
                     all = 0;
             }
 
-            if(count == 3) {
-                all = all + 99 + 120 + 50;
+            if(count == 6) {
+                all = all + 95 + 120 + 80;
                 //all = all + 35;
             }
 
