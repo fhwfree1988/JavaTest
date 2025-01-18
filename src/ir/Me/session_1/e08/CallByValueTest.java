@@ -27,6 +27,14 @@ public class CallByValueTest {
         swap3(p);
         logger.info("p.x2: " + p.x);
         logger.info("p.y2: " + p.y);
+
+
+        java.util.Vector vc=new java.util.Vector();
+        vc.add("111");
+        vc.add("222");
+        functioncall(vc);
+        vc.add("333");
+        System.out.println(vc);
     }
 
     public static void changeString(String s) {
@@ -49,5 +57,10 @@ public class CallByValueTest {
         Integer temp = p.x;
         p.x = p.y;
         p.y = temp;
+    }
+
+    public static void functioncall(java.util.Vector vc){
+        vc.removeAllElements();
+        //vc = null;
     }
 }
