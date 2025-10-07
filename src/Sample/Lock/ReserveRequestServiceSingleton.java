@@ -2,12 +2,12 @@ package Sample.Lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-import org.hibernate.Criteria;
+/*import org.hibernate.Criteria;
 import org.hibernate.criterion.Projections;
-import org.hibernate.criterion.Restrictions;
+import org.hibernate.criterion.Restrictions;*/
 
 public class ReserveRequestServiceSingleton {
-    private static ReserveRequestServiceSingleton instance = null;
+    /*private static ReserveRequestServiceSingleton instance = null;
     private ReentrantLock reentrantLock = new ReentrantLock();
     public static ReserveRequestServiceSingleton getInstance(){
         if (instance == null) {
@@ -29,6 +29,6 @@ public class ReserveRequestServiceSingleton {
             System.out.println("saveRequest Unlock");
             //reentrantLock.unlock();
         }
-    }
+    }*/
 }
 
